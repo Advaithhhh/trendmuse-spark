@@ -106,24 +106,29 @@ const FeatureSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="relative bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:shadow-xl hover:translate-y-[-5px] group"
+              className="relative overflow-hidden bg-white dark:bg-gray-900/60 backdrop-blur-sm rounded-xl p-6 shadow-lg transition-all duration-300 border border-gray-100/80 dark:border-gray-800/50 hover:shadow-xl hover:-translate-y-1 group"
               style={{ animationDelay: feature.delay }}
             >
-              <div className={`h-12 w-12 rounded-lg bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 shadow-lg transform transition-transform group-hover:scale-110`}>
+              <div className="absolute -right-10 -top-10 w-40 h-40 bg-gradient-to-br from-gray-50/40 to-gray-100/20 dark:from-gray-800/20 dark:to-gray-900/10 rounded-full opacity-70 blur-xl transform transition-transform group-hover:scale-125" />
+              
+              <div className={`relative h-12 w-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 shadow-lg transform transition-transform group-hover:scale-110 group-hover:rotate-3`}>
                 <feature.icon className="h-6 w-6 text-white" />
               </div>
               
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-brand-blue transition-colors">
+              <h3 className="relative text-xl font-semibold mb-3 group-hover:text-brand-blue transition-colors">
                 {feature.title}
               </h3>
               
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
+              <p className="relative text-gray-600 dark:text-gray-400 mb-5 line-clamp-3">
                 {feature.description}
               </p>
               
-              <div className="absolute bottom-6 right-6 opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                <div className="h-8 w-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                  <ArrowRight className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+              <div className="relative flex justify-end items-center mt-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                <div className="flex items-center justify-center text-sm font-medium text-brand-blue">
+                  <span className="mr-2">Learn more</span>
+                  <div className="h-7 w-7 rounded-full bg-brand-blue/10 flex items-center justify-center">
+                    <ArrowRight className="h-3.5 w-3.5 text-brand-blue" />
+                  </div>
                 </div>
               </div>
             </div>
