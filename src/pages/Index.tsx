@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -76,7 +75,7 @@ const Index = () => {
         <HeroSection />
         
         {/* How It Works */}
-        <section className="py-24 bg-white dark:bg-gray-900">
+        <section className="py-16 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <span className="inline-block px-3 py-1 text-sm font-medium bg-brand-purple/10 text-brand-purple rounded-full mb-4">
@@ -122,7 +121,7 @@ const Index = () => {
         <FeatureSection />
         
         {/* Testimonials Section */}
-        <section id="testimonials" className="py-24 bg-gray-50 dark:bg-gray-950">
+        <section id="testimonials" className="py-16 bg-gray-50 dark:bg-gray-950">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <span className="inline-block px-3 py-1 text-sm font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 rounded-full mb-4">
@@ -154,7 +153,7 @@ const Index = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
+        <section className="py-16 bg-white dark:bg-gray-900 relative overflow-hidden">
           <div className="absolute inset-0 opacity-30">
             <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-brand-blue/20 to-brand-purple/20 blur-3xl rounded-full" />
             <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-gradient-to-tr from-brand-purple/20 to-brand-blue/20 blur-3xl rounded-full" />

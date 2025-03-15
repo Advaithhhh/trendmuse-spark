@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -7,7 +6,7 @@ import { ArrowRight, TrendingUp, Sparkles, RefreshCw } from "lucide-react";
 const HeroSection = () => {
   const trendingItemsRef = useRef<HTMLDivElement>(null);
 
-  // Animation for trending items
+  // Animation for trending items - modified to keep items visible
   useEffect(() => {
     const trendingItems = trendingItemsRef.current?.querySelectorAll('.trending-item');
     
@@ -15,7 +14,8 @@ const HeroSection = () => {
       let delay = 0;
       trendingItems.forEach((item) => {
         setTimeout(() => {
-          item.classList.add('animate-fade-in-up');
+          item.classList.add('animate-fade-in');
+          item.classList.remove('opacity-0');
         }, delay);
         delay += 300;
       });
@@ -32,7 +32,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden pt-20 pb-20 md:pt-32 md:pb-48">
+    <div className="relative overflow-hidden pt-20 pb-16 md:pt-32 md:pb-32">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-t from-brand-blue/10 to-brand-purple/10 blur-3xl rounded-full opacity-70" />

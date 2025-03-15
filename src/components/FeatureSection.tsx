@@ -1,4 +1,3 @@
-
 import React from "react";
 import { 
   TrendingUp, 
@@ -84,7 +83,7 @@ const FeatureSection = () => {
   ];
 
   return (
-    <section id="features" className="relative py-24 overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
+    <section id="features" className="relative py-16 overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
       {/* Abstract Background Elements */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-purple/30 rounded-full filter blur-3xl" />
@@ -93,15 +92,15 @@ const FeatureSection = () => {
       </div>
       
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full bg-gradient-to-r from-brand-blue/10 to-brand-purple/10 backdrop-blur-sm border border-brand-purple/10">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-4 rounded-full bg-gradient-to-r from-brand-blue/10 to-brand-purple/10 backdrop-blur-sm border border-brand-purple/10">
             <Sparkles className="h-4 w-4 mr-2 text-brand-purple" />
             <span className="text-sm font-medium bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent">
               Content Intelligence Tools
             </span>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
             All the tools you need to stay ahead of trends
           </h2>
           
@@ -110,7 +109,7 @@ const FeatureSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card
               key={index}
@@ -153,7 +152,7 @@ const FeatureSection = () => {
           ))}
         </div>
         
-        <div className="text-center mt-20">
+        <div className="text-center mt-16">
           <Link to="/register">
             <Button 
               size="lg" 
