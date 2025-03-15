@@ -31,6 +31,14 @@ const HeroSection = () => {
     { tag: "#QuietCamping", growth: 125 },
   ];
 
+  // Scroll to features section
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById("features");
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="relative overflow-hidden pt-20 pb-16 md:pt-32 md:pb-32">
       {/* Background Elements */}
@@ -68,15 +76,14 @@ const HeroSection = () => {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link to="/#features">
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-gray-300 text-gray-700 dark:text-gray-200 w-full sm:w-auto font-medium"
-                >
-                  See Features
-                </Button>
-              </Link>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-gray-300 text-gray-700 dark:text-gray-200 w-full sm:w-auto font-medium"
+                onClick={scrollToFeatures}
+              >
+                See Features
+              </Button>
             </div>
             
             <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">

@@ -67,6 +67,14 @@ const Index = () => {
     },
   ];
 
+  // Scroll to section handler
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -178,15 +186,14 @@ const Index = () => {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Link to="/pricing">
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="border-gray-300 text-gray-700 dark:text-gray-200 font-medium w-full sm:w-auto"
-                  >
-                    View Pricing
-                  </Button>
-                </Link>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-gray-300 text-gray-700 dark:text-gray-200 font-medium w-full sm:w-auto"
+                  onClick={() => scrollToSection("pricing")}
+                >
+                  View Pricing
+                </Button>
               </div>
               
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-6">

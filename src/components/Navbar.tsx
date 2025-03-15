@@ -40,11 +40,28 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Scroll to section handler
+  const scrollToSection = (sectionId: string) => {
+    closeMobileMenu();
+    
+    // Check if we're on the homepage
+    if (location.pathname !== "/") {
+      // Navigate to home page with the hash
+      window.location.href = `/${sectionId}`;
+      return;
+    }
+    
+    const element = document.getElementById(sectionId.replace("#", ""));
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   // Define navigation items
   const navItems = [
-    { name: "Features", path: "/#features" },
-    { name: "Pricing", path: "/pricing" },
-    { name: "Testimonials", path: "/#testimonials" },
+    { name: "Features", path: "features" },
+    { name: "Pricing", path: "pricing" },
+    { name: "Testimonials", path: "testimonials" },
   ];
 
   return (
@@ -73,17 +90,17 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.name}
-              to={item.path}
+              onClick={() => scrollToSection(item.path)}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800/60 ${
-                location.pathname === item.path
+                location.pathname === `/${item.path}`
                   ? "text-brand-blue dark:text-brand-blue"
                   : "text-gray-700 dark:text-gray-300"
               }`}
             >
               {item.name}
-            </Link>
+            </button>
           ))}
         </nav>
 
@@ -150,14 +167,13 @@ const Navbar = () => {
           <div className="flex-1 overflow-y-auto">
             <nav className="flex flex-col p-4 space-y-3">
               {navItems.map((item) => (
-                <Link
+                <button
                   key={item.name}
-                  to={item.path}
+                  onClick={() => scrollToSection(item.path)}
                   className="px-4 py-3 rounded-md text-base font-medium transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800/60"
-                  onClick={closeMobileMenu}
                 >
                   {item.name}
-                </Link>
+                </button>
               ))}
             </nav>
           </div>
