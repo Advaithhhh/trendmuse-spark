@@ -106,17 +106,12 @@ const Navbar = () => {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex items-center space-x-3">
-          <Link to="/login">
-            <Button variant="ghost" size="sm" className="font-medium">
-              Log in
-            </Button>
-          </Link>
           <Link to="/register">
             <Button 
               size="sm" 
               className="bg-gradient-to-r from-brand-blue to-brand-purple hover:from-brand-blue/90 hover:to-brand-purple/90 text-white font-medium transition-all duration-300 hover:shadow-lg"
             >
-              Start Free Trial
+              Get Early Access
             </Button>
           </Link>
         </div>
@@ -179,16 +174,11 @@ const Navbar = () => {
           </div>
 
           <div className="p-4 border-t border-gray-200 dark:border-gray-800 space-y-3">
-            <Link to="/login" onClick={closeMobileMenu}>
-              <Button variant="outline" className="w-full font-medium">
-                Log in
-              </Button>
-            </Link>
             <Link to="/register" onClick={closeMobileMenu}>
               <Button 
                 className="w-full bg-gradient-to-r from-brand-blue to-brand-purple hover:from-brand-blue/90 hover:to-brand-purple/90 text-white font-medium"
               >
-                Start Free Trial
+                Get Early Access
               </Button>
             </Link>
           </div>

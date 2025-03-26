@@ -1,10 +1,11 @@
+
 import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection from "@/components/FeatureSection";
 import PricingTable from "@/components/PricingTable";
 import Footer from "@/components/Footer";
-import { ArrowRight, ArrowDownRight, Zap, Search, AlertCircle } from "lucide-react";
+import { ArrowRight, ArrowDownRight, Zap, Search, AlertCircle, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Link } from "react-router-dom";
@@ -182,7 +183,7 @@ const Index = () => {
                     size="lg" 
                     className="bg-gradient-to-r from-brand-blue to-brand-purple text-white font-medium px-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
                   >
-                    <span>Start Your Free Trial</span>
+                    <span>Get Early Access</span>
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
@@ -196,9 +197,10 @@ const Index = () => {
                 </Button>
               </div>
               
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-6">
-                No credit card required. 14-day free trial.
-              </p>
+              <div className="flex items-center justify-center mt-6 text-sm text-gray-500 dark:text-gray-400 space-x-2">
+                <Gift className="h-4 w-4 text-brand-blue" />
+                <span className="font-medium text-brand-blue">Free 10 credits when you register for early access</span>
+              </div>
             </div>
           </div>
         </section>

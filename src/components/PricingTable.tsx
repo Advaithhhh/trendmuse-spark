@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, X, HelpCircle, ArrowRight } from "lucide-react";
+import { Check, X, HelpCircle, ArrowRight, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -36,7 +36,7 @@ const PricingTable = () => {
         "Team accounts",
         "API access",
       ],
-      cta: "Start Hobbyist Trial",
+      cta: "Get Early Access",
       highlighted: false,
     },
     {
@@ -57,7 +57,7 @@ const PricingTable = () => {
         "Competitor gap reports",
         "API access",
       ],
-      cta: "Start Pro Creator Trial",
+      cta: "Get Early Access",
       highlighted: true,
       badge: "Most Popular",
     },
@@ -78,7 +78,7 @@ const PricingTable = () => {
         "Custom integrations",
       ],
       notIncluded: [],
-      cta: "Start Agency Trial",
+      cta: "Get Early Access",
       highlighted: false,
     },
   ];
@@ -110,7 +110,11 @@ const PricingTable = () => {
             Choose the plan that's right for you
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            All plans include a 14-day free trial. No credit card required.
+            <span className="font-medium text-brand-blue inline-flex items-center mr-2">
+              <Gift className="h-4 w-4 mr-1" />
+              Free 10 credits 
+            </span>
+            when you register for early access.
           </p>
 
           {/* Billing Toggle */}
@@ -204,6 +208,11 @@ const PricingTable = () => {
                     <ArrowRight className="ml-1.5 h-4 w-4" />
                   </Button>
                 </Link>
+
+                <div className="flex items-center mb-6 text-sm">
+                  <Gift className="h-4 w-4 text-brand-blue mr-1.5" />
+                  <span className="text-brand-blue font-medium">Free 10 credits included</span>
+                </div>
 
                 <div className="border-t border-gray-200 dark:border-gray-800 pt-6">
                   <h4 className="font-medium mb-4">What's included:</h4>

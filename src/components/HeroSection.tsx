@@ -1,7 +1,8 @@
+
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Sparkles, RefreshCw } from "lucide-react";
+import { ArrowRight, TrendingUp, Sparkles, RefreshCw, Gift } from "lucide-react";
 
 const HeroSection = () => {
   const trendingItemsRef = useRef<HTMLDivElement>(null);
@@ -53,7 +54,7 @@ const HeroSection = () => {
             <div className="flex items-center mb-6 space-x-2">
               <div className="bg-brand-purple/10 text-brand-purple rounded-full px-3 py-1 text-sm font-medium inline-flex items-center">
                 <Sparkles className="h-3.5 w-3.5 mr-1" />
-                <span>AI-Powered Content Intelligence</span>
+                <span>Early Access Available</span>
               </div>
             </div>
             
@@ -72,7 +73,7 @@ const HeroSection = () => {
                   size="lg" 
                   className="bg-gradient-to-r from-brand-blue to-brand-purple text-white w-full sm:w-auto font-medium px-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:from-brand-blue/90 hover:to-brand-purple/90"
                 >
-                  <span>Start Your Free Trial</span>
+                  <span>Get Early Access</span>
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -87,14 +88,14 @@ const HeroSection = () => {
             </div>
             
             <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-              <svg className="h-5 w-5 text-brand-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.5 12L10.5 15L16.5 9M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              <span>No credit card required</span>
+              <div className="flex items-center">
+                <Gift className="h-4 w-4 text-brand-blue mr-1.5" />
+                <span className="font-medium text-brand-blue">Free 10 credits</span>
+              </div>
               <div className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />
-              <span>14-day free trial</span>
+              <span>Early access members</span>
               <div className="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600" />
-              <span>Cancel anytime</span>
+              <span>Limited spots</span>
             </div>
           </div>
           
@@ -151,7 +152,7 @@ const HeroSection = () => {
                         to="/register" 
                         className="text-sm font-medium text-brand-blue hover:text-brand-purple transition-colors"
                       >
-                        Get 1 free pre-viral alert
+                        Join early access
                       </Link>
                     </div>
                   </div>
